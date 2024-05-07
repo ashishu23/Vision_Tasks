@@ -1,0 +1,2 @@
+lab1_pkg
+-DCATKIN_DEVEL_PREFIX=/home/ashish/Desktop/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ashish/Desktop/catkin_ws/install -G Unix Makefiles
