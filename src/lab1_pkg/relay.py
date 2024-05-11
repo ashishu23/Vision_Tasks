@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 import rospy 
 from ackermann_msgs.msg import AckermannDriveStamped
 
@@ -7,8 +8,8 @@ def callback(msg):
     new_steering_angle=msg.drive.steering_angle*3
 
     new_msg=AckermannDriveStamped()
-    new_msg.header.speed=new_speed
-    new_msg.header.steering_angle=new_steering_angle
+    new_msg.drive.speed=new_speed
+    new_msg.drive.steering_angle=new_steering_angle
 
     drive_relay_pub.publish(new_msg)
 

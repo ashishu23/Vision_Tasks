@@ -1,8 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy 
 from ackermann_msgs.msg import AckermannDriveStamped
 
 def talker():
+    rospy.init_node('talker',anonymous=True)
     v=rospy.get_param("~v",0.0)
     d=rospy.get_param("~d",0.0)
     
@@ -15,7 +16,7 @@ def talker():
     rate=rospy.Rate(10)
     while not rospy.is_shutdown():
         pub.publish(msg)
-        rate.sleep
+        rate.sleep()
 
 if __name__=='__main__':
     try:
